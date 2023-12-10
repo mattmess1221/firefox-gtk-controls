@@ -6,48 +6,56 @@
 $gtk-assets: "./gtk-3.0/assets";
 
 $buttons: (
-    min: minimize,
-    max: maximize,
-    restore: maximized,
-    close: close
+  min: minimize,
+  max: maximize,
+  restore: maximized,
+  close: close,
 );
 
-.titlebar-buttonbox {
-    gap: 15px;
-    margin-left: 1px
+$variants: (normal hover active);
+
+.titlebar-buttonbox:-moz-lwtheme {
+  gap: 8px;
+  margin-left: 2px;
 }
 
-.titlebar-button {
-    margin: 0 !important;
-    padding: 0 !important;
-    height: 1rem !important;
+.titlebar-button:-moz-lwtheme > .toolbarbutton-icon {
+  padding: 0 8px !important;
+}
 
-    > .toolbarbutton-icon {
-        padding: 8px !important;
+toolbarbutton:-moz-lwtheme:hover {
+  background-color: rgba(0, 0, 0, 0%) !important;
+}
+
+@mixin window-control($file, $variant) {
+  list-style-image: url(#{$gtk-assets}/#{$file}-#{$variant}.svg);
+}
+
+@mixin gtk-control($file, $variant, $backdrop: false) {
+  $pseudo: null;
+  @if $backdrop {
+    @if $variant == normal {
+      $pseudo: ":-moz-window-inactive";
+    } @else {
+      $pseudo: ":#{$variant}:-moz-window-inactive";
     }
-    box-shadow: black 2px 2px 5px;
+    $variant: "backdrop-#{$variant}";
+  } @else if $variant != normal {
+    $pseudo: ":#{$variant}";
+  } @else {
+    $pseudo: "";
+  }
+
+  &#{$pseudo} {
+    list-style-image: url("#{$gtk-assets}/#{$file}-#{$variant}.svg") !important;
+  }
 }
 
-toolbarbutton:hover {
-    background-color: rgba(0, 0, 0, 0%) !important;
-}
 @each $cls, $file in $buttons {
-    toolbarbutton.titlebar-#{$cls} {
-        list-style-image: url(#{$gtk-assets}/#{$file}-normal.svg) !important;
-        &:hover {
-            list-style-image: url(#{$gtk-assets}/#{$file}-hover.svg) !important;
-        }
-        &:active {
-            list-style-image: url(#{$gtk-assets}/#{$file}-active.svg) !important;
-        }
-        &:-moz-window-inactive {
-            list-style-image: url(#{$gtk-assets}/#{$file}-backdrop-normal.svg) !important;
-        }
-        &:hover:-moz-window-inactive {
-            list-style-image: url(#{$gtk-assets}/#{$file}-backdrop-hover.svg) !important;
-        }
-        &:active:-moz-window-inactive {
-            list-style-image: url(#{$gtk-assets}/#{$file}-backdrop-active.svg) !important;
-        }
+  toolbarbutton.titlebar-#{$cls}:-moz-lwtheme {
+    @each $variant in $variants {
+      @include gtk-control($file, $variant);
+      @include gtk-control($file, $variant, $backdrop: true);
     }
+  }
 }
