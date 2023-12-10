@@ -40,7 +40,7 @@ profilepath="<paste path>"
 mkdir "$profilepath/chrome"
 ln -s ~/.config/gtk-3.0 "$profilepath/chrome/gtk-3.0"
 cp firefox-csd.css "$profilepath/chrome/"
-echo '' >> "$profilepath/userChrome.css"
+echo '@import "./firefox-csd.css";' >> "$profilepath/userChrome.css"
 ```
 
 #### Steps
