@@ -1,0 +1,53 @@
+/*
+ * A userChrome that uses the current gtk window decorations, no matter what theme is being used.
+ *
+ * Normally, the gtk decorations are only used in the default gtk theme.
+ */
+$gtk-assets: "./gtk-3.0/assets";
+
+$buttons: (
+    min: minimize,
+    max: maximize,
+    restore: maximized,
+    close: close
+);
+
+.titlebar-buttonbox {
+    gap: 15px;
+    margin-left: 1px
+}
+
+.titlebar-button {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 1rem !important;
+
+    > .toolbarbutton-icon {
+        padding: 8px !important;
+    }
+    box-shadow: black 2px 2px 5px;
+}
+
+toolbarbutton:hover {
+    background-color: rgba(0, 0, 0, 0%) !important;
+}
+@each $cls, $file in $buttons {
+    toolbarbutton.titlebar-#{$cls} {
+        list-style-image: url(#{$gtk-assets}/#{$file}-normal.svg) !important;
+        &:hover {
+            list-style-image: url(#{$gtk-assets}/#{$file}-hover.svg) !important;
+        }
+        &:active {
+            list-style-image: url(#{$gtk-assets}/#{$file}-active.svg) !important;
+        }
+        &:-moz-window-inactive {
+            list-style-image: url(#{$gtk-assets}/#{$file}-backdrop-normal.svg) !important;
+        }
+        &:hover:-moz-window-inactive {
+            list-style-image: url(#{$gtk-assets}/#{$file}-backdrop-hover.svg) !important;
+        }
+        &:active:-moz-window-inactive {
+            list-style-image: url(#{$gtk-assets}/#{$file}-backdrop-active.svg) !important;
+        }
+    }
+}

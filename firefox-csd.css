@@ -1,0 +1,101 @@
+/*
+ * A userChrome that uses the current gtk window decorations, no matter what theme is being used.
+ *
+ * Normally, the gtk decorations are only used in the default gtk theme.
+ */
+.titlebar-buttonbox {
+  gap: 15px;
+  margin-left: 1px;
+}
+
+.titlebar-button {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 1rem !important;
+  box-shadow: black 2px 2px 5px;
+}
+.titlebar-button > .toolbarbutton-icon {
+  padding: 8px !important;
+}
+
+toolbarbutton:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+toolbarbutton.titlebar-min {
+  list-style-image: url(./gtk-3.0/assets/minimize-normal.svg) !important;
+}
+toolbarbutton.titlebar-min:hover {
+  list-style-image: url(./gtk-3.0/assets/minimize-hover.svg) !important;
+}
+toolbarbutton.titlebar-min:active {
+  list-style-image: url(./gtk-3.0/assets/minimize-active.svg) !important;
+}
+toolbarbutton.titlebar-min:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/minimize-backdrop-normal.svg) !important;
+}
+toolbarbutton.titlebar-min:hover:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/minimize-backdrop-hover.svg) !important;
+}
+toolbarbutton.titlebar-min:active:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/minimize-backdrop-active.svg) !important;
+}
+
+toolbarbutton.titlebar-max {
+  list-style-image: url(./gtk-3.0/assets/maximize-normal.svg) !important;
+}
+toolbarbutton.titlebar-max:hover {
+  list-style-image: url(./gtk-3.0/assets/maximize-hover.svg) !important;
+}
+toolbarbutton.titlebar-max:active {
+  list-style-image: url(./gtk-3.0/assets/maximize-active.svg) !important;
+}
+toolbarbutton.titlebar-max:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/maximize-backdrop-normal.svg) !important;
+}
+toolbarbutton.titlebar-max:hover:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/maximize-backdrop-hover.svg) !important;
+}
+toolbarbutton.titlebar-max:active:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/maximize-backdrop-active.svg) !important;
+}
+
+toolbarbutton.titlebar-restore {
+  list-style-image: url(./gtk-3.0/assets/maximized-normal.svg) !important;
+}
+toolbarbutton.titlebar-restore:hover {
+  list-style-image: url(./gtk-3.0/assets/maximized-hover.svg) !important;
+}
+toolbarbutton.titlebar-restore:active {
+  list-style-image: url(./gtk-3.0/assets/maximized-active.svg) !important;
+}
+toolbarbutton.titlebar-restore:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/maximized-backdrop-normal.svg) !important;
+}
+toolbarbutton.titlebar-restore:hover:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/maximized-backdrop-hover.svg) !important;
+}
+toolbarbutton.titlebar-restore:active:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/maximized-backdrop-active.svg) !important;
+}
+
+toolbarbutton.titlebar-close {
+  list-style-image: url(./gtk-3.0/assets/close-normal.svg) !important;
+}
+toolbarbutton.titlebar-close:hover {
+  list-style-image: url(./gtk-3.0/assets/close-hover.svg) !important;
+}
+toolbarbutton.titlebar-close:active {
+  list-style-image: url(./gtk-3.0/assets/close-active.svg) !important;
+}
+toolbarbutton.titlebar-close:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/close-backdrop-normal.svg) !important;
+}
+toolbarbutton.titlebar-close:hover:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/close-backdrop-hover.svg) !important;
+}
+toolbarbutton.titlebar-close:active:-moz-window-inactive {
+  list-style-image: url(./gtk-3.0/assets/close-backdrop-active.svg) !important;
+}
+
+/*# sourceMappingURL=firefox-csd.css.map */

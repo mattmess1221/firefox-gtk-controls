@@ -1,0 +1,16 @@
+{
+  "name": "firefox-gtk-controls",
+  "version": "1.0.0",
+  "description": "Firefox userchrome for using the user's gtk assets with any theme",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass firefox-csd.scss firefox-csd.css",
+    "watch": "npm run-script build -- -w",
+    "clean": "rm *.css *.map"
+  },
+  "author": "Matthew Messinger",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
