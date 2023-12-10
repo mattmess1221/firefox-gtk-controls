@@ -33,7 +33,7 @@ You will need your profile path, so visit `about:profiles` in firefox and write 
 
 #### TL;DR
 
-Copy this script and restart firefox.
+Run this bash snippet with your own `profilepath` variable, then restart Firefox.
 
 ```sh
 profilepath="<paste path>"
