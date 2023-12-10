@@ -10,7 +10,7 @@ Using custom stylesheets, you can enable Firefox to use your configured window d
 
 ## Installing
 
-Before starting, you need to open `about:config` and manually set `toolkit.legacyUserProfileCustomization.stylesheets = true`. This will tell Firefox to look for your stylesheets when starting.
+Before starting, you need to open `about:config` and manually set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`. This will tell Firefox to look for your stylesheets when starting.
 
 ### Installer Script
 
@@ -77,9 +77,9 @@ If you think your profile should be included in the search path, open an issue.
 
 Firefox will not pick up the user chrome if you didn't set the correct variable in `about:config`.
 
-Fix: Set the variable `toolkit.legacyUserProfileCustomization.stylesheets` to `true` and restart Firefox.
+Fix: Set the variable `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` and restart Firefox.
 
-### The variable `toolkit.legacyUserProfileCustomization.stylesheets` is set to true, but nothing changes
+### The variable `toolkit.legacyUserProfileCustomizations.stylesheets` is set to true, but nothing changes
 
 If you followed the manual instructions, make sure you wrote down the correct profile path from `about:profiles`. It should be in the `.mozilla/firefox` directory, not `.cache/mozilla/firefox`.
 
