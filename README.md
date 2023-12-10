@@ -40,16 +40,16 @@ profilepath="<paste path>"
 mkdir "$profilepath/chrome"
 ln -s ~/.config/gtk-3.0 "$profilepath/chrome/gtk-3.0"
 cp firefox-csd.css "$profilepath/chrome/"
-echo '@import "./firefox-csd.css";' >> "$profilepath/userChrome.css"
+echo '@import "./firefox-csd.css";' >> "$profilepath/chrome/userChrome.css"
 ```
 
 #### Steps
 
 1. Create the directory `$profilepath/chrome` if it does not exist.
 
-2. Create a symbolic link in the same directory to `~/.config/gtk-3.0` named `gtk-3.0`
+2. Copy the `firefox-csd.css` file to the newly created directory.
 
-3. Copy the `firefox-csd.css` file to the newly created directory.
+3. Create a symbolic link in the same directory to `~/.config/gtk-3.0` named `gtk-3.0`
 
 4. Create a new file called `userChrome.css` with the following content. If you need to, you can include other imports in the file.
 
@@ -83,7 +83,7 @@ Fix: Set the variable `toolkit.legacyUserProfileCustomizations.stylesheets` to `
 
 If you followed the manual instructions, make sure you wrote down the correct profile path from `about:profiles`. It should be in the `.mozilla/firefox` directory, not `.cache/mozilla/firefox`.
 
-Fix: Redo the installation steps with the *correct* profile path.
+Fix: Redo the installation steps with the _correct_ profile path.
 
 ### My window control buttons are invisible
 
