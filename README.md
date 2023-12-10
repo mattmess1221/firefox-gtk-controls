@@ -73,8 +73,26 @@ Fix: If your profile isn't located in one of these folders, follow the manual in
 
 If you think your profile should be included in the search path, open an issue.
 
+### After running the installer and restarting firefox, nothing changes
+
+Firefox will not pick up the user chrome if you didn't set the correct variable in `about:config`.
+
+Fix: Set the variable `toolkit.legacyUserProfileCustomization.stylesheets` to `true` and restart Firefox.
+
+### The variable `toolkit.legacyUserProfileCustomization.stylesheets` is set to true, but nothing changes
+
+If you followed the manual instructions, make sure you wrote down the correct profile path from `about:profiles`. It should be in the `.mozilla/firefox` directory, not `.cache/mozilla/firefox`.
+
+Fix: Redo the installation steps with the *correct* profile path.
+
 ### My window control buttons are invisible
 
 This is either because the assets don't exist, the symbolic link wasn't created, or flatpak doesn't have the correct filesystem override.
 
 Fix: Re-run the installer script.
+
+If you did a manual install with flatpak, run this command to expose the gtk-3.0 configuration to Firefox.
+
+```sh
+flatpak override --user org.mozilla.firefox --filesystem=xdg-config/gtk-3.0:ro
+```
