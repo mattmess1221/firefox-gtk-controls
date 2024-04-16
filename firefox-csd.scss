@@ -20,15 +20,11 @@ $variants: (normal hover active);
 }
 
 .titlebar-button:-moz-lwtheme > .toolbarbutton-icon {
-  padding: 0 8px !important;
+    width: 18px;
 }
 
-toolbarbutton:-moz-lwtheme:hover {
+toolbarbutton:-moz-lwtheme:hover > image.toolbarbutton-icon {
   background-color: rgba(0, 0, 0, 0%) !important;
-}
-
-@mixin window-control($file, $variant) {
-  list-style-image: url(#{$gtk-assets}/#{$file}-#{$variant}.svg);
 }
 
 @mixin gtk-control($file, $variant, $backdrop: false) {
@@ -46,13 +42,13 @@ toolbarbutton:-moz-lwtheme:hover {
     $pseudo: "";
   }
 
-  &#{$pseudo} {
-    list-style-image: url("#{$gtk-assets}/#{$file}-#{$variant}.svg") !important;
+  &#{$pseudo} > image.toolbarbutton-icon {
+    background-image: url("#{$gtk-assets}/#{$file}-#{$variant}.svg") !important;
   }
 }
 
 @each $cls, $file in $buttons {
-  toolbarbutton.titlebar-#{$cls}:-moz-lwtheme {
+  toolbarbutton.titlebar-#{$cls}:-moz-lwtheme  {
     @each $variant in $variants {
       @include gtk-control($file, $variant);
       @include gtk-control($file, $variant, $backdrop: true);

@@ -9,87 +9,87 @@
 }
 
 .titlebar-button:-moz-lwtheme > .toolbarbutton-icon {
-  padding: 0 8px !important;
+  width: 18px;
 }
 
-toolbarbutton:-moz-lwtheme:hover {
+toolbarbutton:-moz-lwtheme:hover > image.toolbarbutton-icon {
   background-color: rgba(0, 0, 0, 0) !important;
 }
 
-toolbarbutton.titlebar-min:-moz-lwtheme {
-  list-style-image: url("./gtk-3.0/assets/minimize-normal.svg") !important;
+toolbarbutton.titlebar-min:-moz-lwtheme > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/minimize-normal.svg") !important;
 }
-toolbarbutton.titlebar-min:-moz-lwtheme:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/minimize-backdrop-normal.svg") !important;
+toolbarbutton.titlebar-min:-moz-lwtheme:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/minimize-backdrop-normal.svg") !important;
 }
-toolbarbutton.titlebar-min:-moz-lwtheme:hover {
-  list-style-image: url("./gtk-3.0/assets/minimize-hover.svg") !important;
+toolbarbutton.titlebar-min:-moz-lwtheme:hover > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/minimize-hover.svg") !important;
 }
-toolbarbutton.titlebar-min:-moz-lwtheme:hover:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/minimize-backdrop-hover.svg") !important;
+toolbarbutton.titlebar-min:-moz-lwtheme:hover:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/minimize-backdrop-hover.svg") !important;
 }
-toolbarbutton.titlebar-min:-moz-lwtheme:active {
-  list-style-image: url("./gtk-3.0/assets/minimize-active.svg") !important;
+toolbarbutton.titlebar-min:-moz-lwtheme:active > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/minimize-active.svg") !important;
 }
-toolbarbutton.titlebar-min:-moz-lwtheme:active:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/minimize-backdrop-active.svg") !important;
-}
-
-toolbarbutton.titlebar-max:-moz-lwtheme {
-  list-style-image: url("./gtk-3.0/assets/maximize-normal.svg") !important;
-}
-toolbarbutton.titlebar-max:-moz-lwtheme:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/maximize-backdrop-normal.svg") !important;
-}
-toolbarbutton.titlebar-max:-moz-lwtheme:hover {
-  list-style-image: url("./gtk-3.0/assets/maximize-hover.svg") !important;
-}
-toolbarbutton.titlebar-max:-moz-lwtheme:hover:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/maximize-backdrop-hover.svg") !important;
-}
-toolbarbutton.titlebar-max:-moz-lwtheme:active {
-  list-style-image: url("./gtk-3.0/assets/maximize-active.svg") !important;
-}
-toolbarbutton.titlebar-max:-moz-lwtheme:active:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/maximize-backdrop-active.svg") !important;
+toolbarbutton.titlebar-min:-moz-lwtheme:active:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/minimize-backdrop-active.svg") !important;
 }
 
-toolbarbutton.titlebar-restore:-moz-lwtheme {
-  list-style-image: url("./gtk-3.0/assets/maximized-normal.svg") !important;
+toolbarbutton.titlebar-max:-moz-lwtheme > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximize-normal.svg") !important;
 }
-toolbarbutton.titlebar-restore:-moz-lwtheme:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/maximized-backdrop-normal.svg") !important;
+toolbarbutton.titlebar-max:-moz-lwtheme:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximize-backdrop-normal.svg") !important;
 }
-toolbarbutton.titlebar-restore:-moz-lwtheme:hover {
-  list-style-image: url("./gtk-3.0/assets/maximized-hover.svg") !important;
+toolbarbutton.titlebar-max:-moz-lwtheme:hover > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximize-hover.svg") !important;
 }
-toolbarbutton.titlebar-restore:-moz-lwtheme:hover:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/maximized-backdrop-hover.svg") !important;
+toolbarbutton.titlebar-max:-moz-lwtheme:hover:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximize-backdrop-hover.svg") !important;
 }
-toolbarbutton.titlebar-restore:-moz-lwtheme:active {
-  list-style-image: url("./gtk-3.0/assets/maximized-active.svg") !important;
+toolbarbutton.titlebar-max:-moz-lwtheme:active > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximize-active.svg") !important;
 }
-toolbarbutton.titlebar-restore:-moz-lwtheme:active:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/maximized-backdrop-active.svg") !important;
+toolbarbutton.titlebar-max:-moz-lwtheme:active:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximize-backdrop-active.svg") !important;
 }
 
-toolbarbutton.titlebar-close:-moz-lwtheme {
-  list-style-image: url("./gtk-3.0/assets/close-normal.svg") !important;
+toolbarbutton.titlebar-restore:-moz-lwtheme > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximized-normal.svg") !important;
 }
-toolbarbutton.titlebar-close:-moz-lwtheme:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/close-backdrop-normal.svg") !important;
+toolbarbutton.titlebar-restore:-moz-lwtheme:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximized-backdrop-normal.svg") !important;
 }
-toolbarbutton.titlebar-close:-moz-lwtheme:hover {
-  list-style-image: url("./gtk-3.0/assets/close-hover.svg") !important;
+toolbarbutton.titlebar-restore:-moz-lwtheme:hover > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximized-hover.svg") !important;
 }
-toolbarbutton.titlebar-close:-moz-lwtheme:hover:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/close-backdrop-hover.svg") !important;
+toolbarbutton.titlebar-restore:-moz-lwtheme:hover:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximized-backdrop-hover.svg") !important;
 }
-toolbarbutton.titlebar-close:-moz-lwtheme:active {
-  list-style-image: url("./gtk-3.0/assets/close-active.svg") !important;
+toolbarbutton.titlebar-restore:-moz-lwtheme:active > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximized-active.svg") !important;
 }
-toolbarbutton.titlebar-close:-moz-lwtheme:active:-moz-window-inactive {
-  list-style-image: url("./gtk-3.0/assets/close-backdrop-active.svg") !important;
+toolbarbutton.titlebar-restore:-moz-lwtheme:active:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/maximized-backdrop-active.svg") !important;
+}
+
+toolbarbutton.titlebar-close:-moz-lwtheme > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/close-normal.svg") !important;
+}
+toolbarbutton.titlebar-close:-moz-lwtheme:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/close-backdrop-normal.svg") !important;
+}
+toolbarbutton.titlebar-close:-moz-lwtheme:hover > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/close-hover.svg") !important;
+}
+toolbarbutton.titlebar-close:-moz-lwtheme:hover:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/close-backdrop-hover.svg") !important;
+}
+toolbarbutton.titlebar-close:-moz-lwtheme:active > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/close-active.svg") !important;
+}
+toolbarbutton.titlebar-close:-moz-lwtheme:active:-moz-window-inactive > image.toolbarbutton-icon {
+  background-image: url("./gtk-3.0/assets/close-backdrop-active.svg") !important;
 }
 
 /*# sourceMappingURL=firefox-csd.css.map */
