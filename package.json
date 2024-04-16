@@ -11,6 +11,6 @@
   "author": "Matthew Messinger",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.69.5"
+    "sass": "^1.75.0"
   }
 }
