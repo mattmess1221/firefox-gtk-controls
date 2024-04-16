@@ -3,6 +3,8 @@
  *
  * Normally, the gtk decorations are only used in the default gtk theme.
  */
+@use "sass:list";
+
 $gtk-assets: "./gtk-3.0/assets";
 
 $buttons: (
@@ -14,13 +16,15 @@ $buttons: (
 
 $variants: (normal hover active);
 
+$urls: ();
+
 .titlebar-buttonbox:-moz-lwtheme {
-  gap: 8px;
+  gap: 7px;
   margin-left: 2px;
 }
 
 .titlebar-button:-moz-lwtheme > .toolbarbutton-icon {
-    width: 18px;
+    width: 18px !important;
 }
 
 toolbarbutton:-moz-lwtheme:hover > image.toolbarbutton-icon {
@@ -42,8 +46,12 @@ toolbarbutton:-moz-lwtheme:hover > image.toolbarbutton-icon {
     $pseudo: "";
   }
 
+  $url: url("#{$gtk-assets}/#{$file}-#{$variant}.svg");
+  
+  $urls: list.append($urls, $url) !global;
+
   &#{$pseudo} > image.toolbarbutton-icon {
-    background-image: url("#{$gtk-assets}/#{$file}-#{$variant}.svg") !important;
+    background-image: $url !important;
   }
 }
 
@@ -54,4 +62,14 @@ toolbarbutton:-moz-lwtheme:hover > image.toolbarbutton-icon {
       @include gtk-control($file, $variant, $backdrop: true);
     }
   }
+}
+
+// pre-load all the images so there aren't any load flashes
+.titlebar-buttonbox:-moz-lwtheme::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: #{$urls};
 }

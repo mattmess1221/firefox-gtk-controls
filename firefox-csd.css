@@ -4,12 +4,12 @@
  * Normally, the gtk decorations are only used in the default gtk theme.
  */
 .titlebar-buttonbox:-moz-lwtheme {
-  gap: 8px;
+  gap: 7px;
   margin-left: 2px;
 }
 
 .titlebar-button:-moz-lwtheme > .toolbarbutton-icon {
-  width: 18px;
+  width: 18px !important;
 }
 
 toolbarbutton:-moz-lwtheme:hover > image.toolbarbutton-icon {
@@ -90,6 +90,15 @@ toolbarbutton.titlebar-close:-moz-lwtheme:active > image.toolbarbutton-icon {
 }
 toolbarbutton.titlebar-close:-moz-lwtheme:active:-moz-window-inactive > image.toolbarbutton-icon {
   background-image: url("./gtk-3.0/assets/close-backdrop-active.svg") !important;
+}
+
+.titlebar-buttonbox:-moz-lwtheme::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url("./gtk-3.0/assets/minimize-normal.svg") url("./gtk-3.0/assets/minimize-backdrop-normal.svg") url("./gtk-3.0/assets/minimize-hover.svg") url("./gtk-3.0/assets/minimize-backdrop-hover.svg") url("./gtk-3.0/assets/minimize-active.svg") url("./gtk-3.0/assets/minimize-backdrop-active.svg") url("./gtk-3.0/assets/maximize-normal.svg") url("./gtk-3.0/assets/maximize-backdrop-normal.svg") url("./gtk-3.0/assets/maximize-hover.svg") url("./gtk-3.0/assets/maximize-backdrop-hover.svg") url("./gtk-3.0/assets/maximize-active.svg") url("./gtk-3.0/assets/maximize-backdrop-active.svg") url("./gtk-3.0/assets/maximized-normal.svg") url("./gtk-3.0/assets/maximized-backdrop-normal.svg") url("./gtk-3.0/assets/maximized-hover.svg") url("./gtk-3.0/assets/maximized-backdrop-hover.svg") url("./gtk-3.0/assets/maximized-active.svg") url("./gtk-3.0/assets/maximized-backdrop-active.svg") url("./gtk-3.0/assets/close-normal.svg") url("./gtk-3.0/assets/close-backdrop-normal.svg") url("./gtk-3.0/assets/close-hover.svg") url("./gtk-3.0/assets/close-backdrop-hover.svg") url("./gtk-3.0/assets/close-active.svg") url("./gtk-3.0/assets/close-backdrop-active.svg");
 }
 
 /*# sourceMappingURL=firefox-csd.css.map */
