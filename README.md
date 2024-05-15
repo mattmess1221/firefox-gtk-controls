@@ -1,5 +1,7 @@
 # Firefox GTK Controls
 
+> **NOTE**: This tool is not needed. To get native window controls in unmodified Firefox, open about:config and set the key `widget.gtk.non-native-titlebar-buttons.enabled` to `false`.
+
 On Linux, if you try to use a theme from an addon, Firefox will use the default Adwaita window control buttons. This is [intentional](https://bugzilla.mozilla.org/show_bug.cgi?id=1832975).
 
 The only supported way to use your custom window controls (close, maximize, restore, minimize) is to use the System theme. So addon themes are effectively broken on Linux.
